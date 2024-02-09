@@ -11,11 +11,12 @@ public:
         
         for (int i=0; i<nums.size(); i++){
             int remain =target -nums[i];
-            if(mapping.count(remain) > 0){
+            //if(mapping.count(remain) > 0) higher runtime
+            if(mapping.find(remain) != mapping.end()){
                 result.push_back(mapping[remain]);
                 result.push_back(i);
             }
-             mapping[nums[i]] = i;
+            mapping[nums[i]] = i;
         }
 
         return result;
