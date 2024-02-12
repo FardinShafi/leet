@@ -29,6 +29,7 @@ public:
             {
                 string s = strs[k];
                 string t = strs[i];
+                
                 if (s[0] != t[0])
                 {
                     return "";
@@ -39,20 +40,16 @@ public:
                 }
                 else if (i == 0 || s[j] == t[j])
                 {
-                    // cout << "K" << k << endl;
                     count = j;
-                    // cout << count << endl;
                 }
             }
             if (count == prevcount || count < prevcount)
             {
                 prevcount = count;
-                // cout << "prev" << prevcount << endl;
                 k = i;
             }
             else{count=prevcount;}
         }
-        // cout<<count+1<<endl;
         string substr = strs[0].substr(0, count + 1);
         return substr;
     }
