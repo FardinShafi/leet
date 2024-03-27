@@ -1,0 +1,22 @@
+175-------------
+
+SELECT P.firstName, P.lastName, A.city, A.state
+FROM Person P
+LEFT JOIN Address A ON P.personId = A.personId;
+
+176-------------
+
+SELECT MAX(salary) AS SecondHighestSalary
+FROM Employee
+WHERE salary < (SELECT MAX(salary) FROM Employee);
+
+577-------------
+
+SELECT e.name, b.bonus
+FROM Employee e
+LEFT JOIN Bonus b ON e.empId = b.empId
+WHERE b.bonus < 1000 OR b.bonus IS NULL;
+
+584-------------
+
+SELECT name FROM Customer WHERE referee_id != 2 OR referee_id is NULL
