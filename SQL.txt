@@ -20,3 +20,8 @@ WHERE b.bonus < 1000 OR b.bonus IS NULL;
 584-------------
 
 SELECT name FROM Customer WHERE referee_id != 2 OR referee_id is NULL
+
+595-------------
+
+SELECT name,population,area FROM World 
+WHERE area>=3000000 OR population>=25000000
