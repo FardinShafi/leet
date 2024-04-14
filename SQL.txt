@@ -33,6 +33,13 @@ FROM Sales s
 INNER JOIN Product p ON s.product_id=p.product_id
 
 1148-------------
+
 SELECT DISTINCT author_id AS id FROM Views
 WHERE author_id=viewer_id 
 ORDER BY id ASC
+
+1378-------------
+
+SELECT b.unique_id, a.name 
+FROM Employees a
+LEFT JOIN EmployeeUNI b ON a.id = b.id;
