@@ -43,3 +43,12 @@ ORDER BY id ASC
 SELECT b.unique_id, a.name 
 FROM Employees a
 LEFT JOIN EmployeeUNI b ON a.id = b.id;
+
+1581-------------
+
+SELECT v.customer_id, COUNT(v.visit_id) AS count_no_trans 
+from Visits v 
+LEFT JOIN Transactions t 
+ON v.visit_id = t.visit_id  
+WHERE t.transaction_id IS NULL 
+GROUP BY v.customer_id; 
