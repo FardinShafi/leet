@@ -56,3 +56,7 @@ GROUP BY v.customer_id;
 1581-------------
 
 SELECT tweet_id FROM Tweets WHERE Length(content)>15
+
+1757-------------
+
+select product_id from Products where low_fats="Y" AND recyclable="Y"
